@@ -3,22 +3,75 @@ html {
 }
 
 .Title-Card {
+  border: 1px solid gray;
+  box-shadow: 5px 5px 5px rgb(45, 45, 45);
   border-radius: 20px;
-  color: white;
 
   padding: 1rem;
   margin: auto;
 
+  width: 37rem;
+
   font-family: Arial, sans-serif;
   text-align: center;
+  
 }
 
 .Title-Card .Title-Card-Name {
   font-size: 5rem;
+  background-image: linear-gradient(to right, white, rgb(168, 168, 168));
+  color: transparent;
+  background-clip: text;
 
 }
 
 .Title-Card .Title-Card-Description {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  background-image: linear-gradient(to right, white, rgb(168, 168, 168));
+  color: transparent;
+  background-clip: text;
 
+}
+
+.HomePageButtonDiv {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.HomePageButton {
+  border: 1px solid gray;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgb(45, 45, 45);
+  background-color: black;
+
+  margin-top: 100px;
+  margin-left: 82px;
+  margin-right: 82px;
+  padding: 1.5rem;
+
+  max-width: 20rem;
+  max-height: 25rem;
+  height: 25rem;
+  width: 20rem;
+
+  font-family: Arial, sans-serif;
+  
+  cursor: pointer;
+}
+
+
+.Projects {
+  font-size: 2.5rem;
+  text-align: left;
+  background-image: linear-gradient(to right, white, rgb(200, 200, 200));
+  color: transparent;
+  background-clip: text;
+  
+}
+
+.ProjectsP {
+  color: white;
+  font-size: 1.1rem;
+  text-align: left;
+  line-height: 1.5;
 }
