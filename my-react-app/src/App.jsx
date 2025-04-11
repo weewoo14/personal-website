@@ -1,9 +1,9 @@
-import Button from './Button.jsx'
+import Home from './Home.jsx'
 
 function App() {
   return (
     <>
-      <Button/>
+      <Home/>
     </>
   );
 }

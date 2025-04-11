@@ -1,0 +1,24 @@
+html {
+  background-color: black;
+}
+
+.Title-Card {
+  border-radius: 20px;
+  color: white;
+
+  padding: 1rem;
+  margin: auto;
+
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.Title-Card .Title-Card-Name {
+  font-size: 5rem;
+
+}
+
+.Title-Card .Title-Card-Description {
+  font-size: 2rem;
+
+}
