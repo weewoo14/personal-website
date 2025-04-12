@@ -1,3 +1,7 @@
+:root {
+  --maxWindowWidth: 1470;
+}
+
 html {
   background-color: black;
 }
@@ -48,6 +52,8 @@ html {
 .HomePageButtonDiv {
   display: flex;
   justify-content: space-evenly;
+
+  max-width: var(--maxWindowWidth);
 }
 
 .HomePageButton {
@@ -70,7 +76,7 @@ html {
 }
 
 
-.Projects {
+.ProjectsN, .ExperienceN, .LinksN {
   font-size: 2.5rem;
   text-align: left;
   background-image: linear-gradient(to right, white, rgb(168, 168, 168));
@@ -79,7 +85,7 @@ html {
   
 }
 
-.ProjectsP {
+.ProjectsP, .ExperienceP, .LinksP {
   color: white;
   font-size: 1.1rem;
   text-align: left;
