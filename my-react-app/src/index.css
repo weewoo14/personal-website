@@ -76,7 +76,7 @@ html {
   cursor: pointer;
 }
 
-.HomePageButton:hover, .ProjectsPageButton:hover, .ExperiencePageButton:hover, .LinksPageButton:hover {
+.HomePageButton:hover, .ProjectsPageButton:hover, .LinksPageButton:hover {
   border: 1px solid white;
   border-radius: 20px;
   box-shadow: 5px 5px 5px rgb(90, 90, 90);
@@ -93,6 +93,11 @@ html {
   font-family: Arial, sans-serif;
   
   cursor: pointer;
+}
+
+.ExperienceCardHeader:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 

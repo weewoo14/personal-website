@@ -1,11 +1,11 @@
 function LinksCards(props) {
-  const sociallinks = {
+  const socialLinks = {
     "LinkedIn": "https://www.linkedin.com/in/haoshi-wu-weewoo14/",
     "DMOJ": "https://dmoj.ca/user/weewoo14"
   }
 
   function goToSocialLink(idname) {
-    window.open(sociallinks[idname], "_blank")
+    window.open(socialLinks[idname], "_blank")
   }
 
   return (

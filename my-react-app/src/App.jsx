@@ -66,7 +66,7 @@ function App() {
             <div className = "ExperiencePageButtonDiv">
               <ExperienceCards idname = "computer-science-club-president" title = "Computer Science Club President" description = "Leading and teaching weekly lectures on computer science topics to 100+ club members, strengthening and improving their skillsets towards real-world technology." time = "June 2024 - Present"/>
               <ExperienceCards idname = "hackathon-member" title = "Hackathon Member" description = "Avid member of hackathons, having attended HawkHacks and JamHacks 8. Built apps such as my Toucan Gacha Game Simulator, improving and bettering the lives of gambling addicts." time = "May 2024 - Present"/>
-              <ExperienceCards idname = "stemcampcit" title = "STEMCamp Counsellor-In-Training" description = "Engaged with 60+ campers to experience STEM-related hands-on and digital activities including modeeling Earth's core with clay, and simulating the solar system with block-based programming." time = "June 2024 - August 2024"/>
+              <ExperienceCards idname = "stemcamp-cit" title = "STEMCamp Counsellor-In-Training" description = "Engaged with 60+ campers to experience STEM-related hands-on and digital activities including modeeling Earth's core with clay, and simulating the solar system with block-based programming." time = "June 2024 - August 2024"/>
             </div>
 
           </>

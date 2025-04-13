@@ -1,5 +1,5 @@
 function ProjectCards(props) {
-  const idtoexternallink = {
+  const idToExternalLink = {
     "meeting-tracker": "https://github.com/weewoo14/meeting-tracker",
     "toucan-gacha-game-simulator":"https://github.com/weewoo14/Toucan-Gacha-Simulator",
     "algorithm-visualiser":"https://github.com/weewoo14/Graph-Theory-Algorithm-Visualiser",
@@ -9,7 +9,7 @@ function ProjectCards(props) {
   };
 
   function goToExternalLink(idname) {
-    window.open(idtoexternallink[idname], '_blank');
+    window.open(idToExternalLink[idname], '_blank');
   }
 
   return (
