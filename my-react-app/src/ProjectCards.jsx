@@ -1,6 +1,6 @@
 function ProjectCards(props) {
   const idtoexternallink = {
-    "message-tracker": "https://github.com/weewoo14/meeting-tracker",
+    "meeting-tracker": "https://github.com/weewoo14/meeting-tracker",
     "toucan-gacha-game-simulator":"https://github.com/weewoo14/Toucan-Gacha-Simulator",
     "algorithm-visualiser":"https://github.com/weewoo14/Graph-Theory-Algorithm-Visualiser",
     "personal-website":"https://github.com/weewoo14/personal-website",

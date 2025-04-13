@@ -44,7 +44,7 @@ function App() {
             <BackToHome/>
 
             <div className = "ProjectsPageButtonDiv">
-              <ProjectCards idname = "message-tracker" img = "https://cdn.discordapp.com/embed/avatars/1.png" imgalt = "Discord Default Pfp" title = "Message Tracker" description = "Made to efficiently track meetings, and look at upcoming meetings." skills = "discord.js, Discord API, JavaScript"/>
+              <ProjectCards idname = "meeting-tracker" img = "https://cdn.discordapp.com/embed/avatars/1.png" imgalt = "Discord Default Pfp" title = "Meeting Tracker" description = "Made to efficiently track meetings, and look at upcoming meetings." skills = "discord.js, Discord API, JavaScript"/>
               <ProjectCards idname = "toucan-gacha-game-simulator" img = {toucanimg} imgalt = "Toucan Card"  title = "Toucan Gacha Game Simulator" description = "Made to track user psychology under the effects of gambling using gacha games." skills = "PyGame, Human Psychology, Game Theory"/>
               <ProjectCards idname = "algorithm-visualiser" img = {treeimg} title = "Algorithm Visualiser" imgalt = "A CS tree" description = "Made to help CS Club members visualise difficult graph theory algorithms, and how they work." skills = "Data Structures and Algorithms, PyGame"/>
             </div>
