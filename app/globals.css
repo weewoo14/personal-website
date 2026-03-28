@@ -3,7 +3,22 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-midnightBlue: #1C1D54;
+  --color-skyBlue: #7ec0f9;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-caveat: "Caveat Brush", sans-serif
+  --font-caveat: "Caveat Brush", sans-serif;
+
+  --animate-star-twinkle: twinkle 5s ease-in-out infinite;
+
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
 }
