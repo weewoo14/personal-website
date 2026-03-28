@@ -13,7 +13,7 @@ let stars: starProperties[] = [];
 function Introduction() {
   
   stars = [];
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < 50; i++) {
     stars.push({
       id: i,
       size: (Math.random() * 7 + 7) + "px",
@@ -32,7 +32,7 @@ function Introduction() {
           key={idx}
             src={starSrc}
             alt="star"
-            className="absolute aspect-square -translate-x-1/2 -translate-y-1/2 animate-star-twinkle"
+            className="absolute aspect-square -translate-x-1/2 -translate-y-1/2 animate-star-twinkle z-0"
             style={{
               height: star.size,
               top: star.top,
@@ -43,10 +43,10 @@ function Introduction() {
         );
       })}
 
-      <h1 className="font-caveat text-white text-[20vw] md:text-[10vw]">
+      <h1 className="font-caveat text-white text-[20vw] md:text-[10vw] z-10">
         Haoshi Wu
       </h1>
-      <p className="font-caveat text-white text-[5vw] md:text-[3vw]">
+      <p className="font-caveat text-white text-[5vw] md:text-[3vw] z-10">
         Aspiring CS student at [insert univeristy here]
       </p>
       
