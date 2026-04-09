@@ -34,12 +34,12 @@ export default function RootLayout({
     <html
       lang="en"
       translate="no"
-      className={`${caveat.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${caveat.variable} ${geistSans.variable} ${geistMono.variable} h-full overscroll-none antialiased`}
     >
       <head>
         <meta name="google" content="notranslate" />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
