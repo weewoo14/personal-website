@@ -6,10 +6,12 @@
 
   --color-midnightBlue: #1C1D54;
   --color-skyBlue: #7ec0f9;
+  --color-tropicalBlue: #0772fc;
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-caveat: "Caveat Brush", sans-serif;
+  --font-caveat: var(--font-caveat-brush);
+  --font-mplus: var(--font-mplus);
 
   --animate-star-twinkle: twinkle 5s ease-in-out infinite;
 

@@ -33,7 +33,12 @@ const navLinks: navLinkProperties[] = [
     name: "[projects]",
     route: "/projects",
     styling: "font-caveat text-[5vw] md:text-[3vw] z-10 underline"
-  }
+  },
+  {
+    name: "[sandbox]",
+    route: "/sandbox",
+    styling: "font-caveat text-[5vw] md:text-[3vw] z-10 underline"
+  },
 ];
 
 function Introduction() {
@@ -51,7 +56,7 @@ function Introduction() {
 
   return(
     <>
-    <div className="flex flex-col justify-center items-center bg-linear-to-b from-[midnightBlue] to-[skyBlue] h-[100vh]">
+    <div className="flex flex-col justify-center items-center bg-linear-to-b from-midnightBlue to-skyBlue h-screen">
 
       <StarField starList={stars} reflect={false}/>
 
@@ -77,7 +82,7 @@ function Introduction() {
       </div>
       
     </div>
-    <div id = "AboutMe" className='flex flex-col justify-center items-center bg-linear-to-b from-[skyBlue] to-[midnightBlue] h-[100vh]'>
+    <div id = "AboutMe" className='flex flex-col justify-center items-center bg-linear-to-b from-skyBlue to-midnightBlue h-screen'>
 
       <StarField starList = {stars} reflect = {true}/>
 

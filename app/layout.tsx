@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Caveat_Brush } from "next/font/google";
+import { M_PLUS_Rounded_1c } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,9 +16,15 @@ const geistMono = Geist_Mono({
 
 const caveat = Caveat_Brush({
   weight: "400",
-  variable: "--font-caveat",
+  variable: "--font-caveat-brush",
   subsets: ["latin"],
 });
+
+const mplus = M_PLUS_Rounded_1c({
+  weight: "500",
+  variable: "--font-mplus",
+  subsets: ["latin"]
+})
 
 export const metadata: Metadata = {
   title: "Haoshi Wu",
@@ -34,7 +41,7 @@ export default function RootLayout({
     <html
       lang="en"
       translate="no"
-      className={`${caveat.variable} ${geistSans.variable} ${geistMono.variable} h-full overscroll-none antialiased`}
+      className={`${caveat.variable} ${geistSans.variable} ${geistMono.variable} ${mplus.variable} h-full overscroll-none antialiased`}
     >
       <head>
         <meta name="google" content="notranslate" />
