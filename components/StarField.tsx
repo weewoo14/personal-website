@@ -1,12 +1,5 @@
+import { starProperties } from "@/types";
 const starSrc = "/star.png"
-
-type starProperties = {
-  id: number;
-  size: number;
-  top: number;
-  left: number;
-  animationDuration: string;
-}
 
 type starFieldProps = {
   starList: starProperties[];

@@ -1,17 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import StarField from "./StarField";
-
-const starSrc = "/star.png"
-
-type starProperties = {
-  id: number;
-  size: number;
-  top: number;
-  left: number;
-  animationDuration: string;
-}
-
-let stars: starProperties[] = [];
+import { starProperties } from "@/types";
+import { generateStars } from "@/utils";
+import { useState, useEffect } from "react";
 
 type navLinkProperties = {
   name: string;
@@ -42,17 +35,15 @@ const navLinks: navLinkProperties[] = [
 ];
 
 function Introduction() {
-  
-  stars = [];
-  for (let i = 0; i < 50; i++) {
-    stars.push({
-      id: i,
-      size: (Math.random() * 7 + 7),
-      top: Math.random() * 100,
-      left: Math.random() * 100,
-      animationDuration: (Math.random() * 2 + 2) + "s"
-    })
-  }
+  const [stars, setStars] = useState<starProperties[]>([]);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    setStars(generateStars());
+  }, [])
+
+  if (!mounted) return null;
 
   return(
     <>
