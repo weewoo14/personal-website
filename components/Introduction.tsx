@@ -47,7 +47,7 @@ function Introduction() {
 
   return(
     <>
-    <div className="flex flex-col justify-center items-center bg-linear-to-b from-midnightBlue to-skyBlue h-screen">
+    <div className="flex flex-col justify-center items-center bg-linear-to-b from-midnightBlue to-tropicalBlue h-screen">
 
       <StarField starList={stars} reflect={false}/>
 
@@ -55,7 +55,7 @@ function Introduction() {
         Haoshi Wu
       </h1>
       <p className="font-caveat text-white text-[5vw] md:text-[3vw] z-10">
-        Aspiring Researcher
+        Aspiring Backend Developer
       </p>
 
       <div className="flex flex-row justify-center items-center gap-4">
@@ -73,7 +73,7 @@ function Introduction() {
       </div>
       
     </div>
-    <div id = "AboutMe" className='flex flex-col justify-center items-center bg-linear-to-b from-skyBlue to-midnightBlue h-screen'>
+    <div id = "AboutMe" className='flex flex-col justify-center items-center bg-linear-to-b from-tropicalBlue to-midnightBlue h-screen'>
 
       <StarField starList = {stars} reflect = {true}/>
 
@@ -93,7 +93,7 @@ function Introduction() {
          
       </div>
       <p className="rotate-180 font-caveat text-gray-300 text-[5vw] md:text-[3vw] z-10">
-        Aspiring Researcher
+        Aspiring Backend Developer
       </p>
       <h1 className="rotate-180 font-caveat text-gray-300 text-[20vw] md:text-[10vw] z-10">
         Haoshi Wu

@@ -16,7 +16,6 @@ function AboutMe() {
     const getGitHubActivity = async () => {
       const response = await fetch("api/github");
       const data = await response.json();
-      console.log(data);
       setGitHubActivity(data);
     }
 
@@ -27,7 +26,7 @@ function AboutMe() {
   if (!mounted) return null;
 
   return (
-    <div id = "AboutMe" className="flex flex-col justify-center items-center h-screen bg-linear-to-b from-midnightBlue to-skyBlue">
+    <div id = "AboutMe" className="flex flex-col justify-center items-center h-screen bg-linear-to-b from-midnightBlue to-tropicalBlue">
       <StarField
         starList={stars}
         reflect={false}
@@ -43,7 +42,7 @@ function AboutMe() {
           You might know me by my online alias "weewoo14". <br/>
           Isn't it so fascinating how the internet can function with billions of users?<br/>
           That's why I'm mainly interested in pursuing research in Computer Science, specifically Combinatorics and Optimizations. <br/>
-          I'll be a First-Year student at the University of [] to help me achieve this goal of mine!
+          I'll be a first-Year student at the University of [] to help me achieve this goal of mine!
         </p>
         <p className="font-mplus text-[1.7rem] md:text-[2vw] text-bold text-white mt-2">
           Recent Commits:
