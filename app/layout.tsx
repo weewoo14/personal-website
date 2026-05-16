@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Caveat_Brush } from "next/font/google";
 import { M_PLUS_Rounded_1c } from "next/font/google";
 import "./globals.css";
+import { AppStateProvider } from "@/components/AppStateProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,7 +47,9 @@ export default function RootLayout({
       <head>
         <meta name="google" content="notranslate" />
       </head>
-      <body>{children}</body>
+      <body>
+        <AppStateProvider>{children}</AppStateProvider>
+      </body>
     </html>
   );
 }

@@ -1,9 +1,8 @@
 'use client';
 import Link from "next/link";
 import StarField from "./StarField";
-import { useState, useEffect } from "react";
-import { generateStars } from "@/utils";
-import { starProperties } from "@/types";
+import PlanetField from "./PlanetField";
+import { useAppState } from "./AppStateProvider";
 
 type projectsProps = {
   title: String,
@@ -52,7 +51,7 @@ const projects: projectsProps[] = [
 function ProjectCard( {title, startDate, endDate, link, description} : projectsProps ) {
   return (
     <a href={link} target="_blank">
-      <div className="h-auto min-h-[25vh] w-full max-w-[60vw] mt-6 mb-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer z-10">
+      <div className="h-auto min-h-[25vh] w-full max-w-[60vw] mt-6 mb-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 shadow-lg hover:shadow-xl hover:bg-white/15 transition-all duration-300 cursor-pointer z-10">
         <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
           <div className="flex-1">
             <h1 className="font-mplus text-white text-2xl md:text-3xl font-bold mb-2">
@@ -82,15 +81,20 @@ function ProjectCard( {title, startDate, endDate, link, description} : projectsP
 }
 
 function Projects() {
-  const [stars, setStars] = useState<starProperties[]>([]);
+  const {dataLoaded, stars} = useAppState();
 
-  useEffect(() => {
-    setStars( generateStars() )
-  }, [])
+  if (!dataLoaded) {
+    return (
+      <div>
+        <h1> Test </h1>
+      </div>
+    );
+  }
 
   return (
     <div id="Projects" className="flex flex-col justify-center items-center h-screen overflow-hidden bg-linear-to-b from-midnightBlue to-tropicalBlue py-12 px-4">
       <StarField starList={stars} reflect={false}/>
+      <PlanetField/>
 
       <h1 className="font-caveat text-white text-6xl md:text-8xl mb-8 z-10 text-center">
         Projects

@@ -13,3 +13,26 @@ export function generateStars() {
       }
       return generatedStars;
 }
+
+export function getVectorPos(data: string) {
+
+  if (typeof data !== 'string') return null;
+
+  const match = data.match(
+    /X\s*=\s*([-\d.+E]+)\s+Y\s*=\s*([-\d.+E]+)\s+Z\s*=\s*([-\d.+E]+)/
+  );
+
+  if (!match) return null;
+
+  return {
+    x: parseFloat(match[1]),
+    y: parseFloat(match[2]),
+    z: parseFloat(match[3])
+  };
+}
+
+export async function getPlanetData(planetID: string) {
+  const response = await fetch(`/api/horizons?planetID=${planetID}`);
+  const data = await response.json();
+  return data;
+}

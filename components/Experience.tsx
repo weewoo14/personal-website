@@ -1,8 +1,7 @@
 'use client';
-import { useState, useEffect } from "react";
 import StarField from "./StarField";
-import { generateStars } from "@/utils";
-import { starProperties } from "@/types";
+import PlanetField from "./PlanetField";
+import { useAppState } from "./AppStateProvider";
 import Link from "next/link";
 
 type experienceProps = {
@@ -16,15 +15,30 @@ type experienceProps = {
 
 const experiences: experienceProps[] = [
   {
+    title: 'Open-Source Contributor',
+    company: 'DMOJ',
+    startDate: 'May 2026',
+    endDate: 'Present',
+    location: 'Remote',
+    description: [
+      `Contributed to a large-scale open source project with 1K+ GitHub stars by resolving frontend UI issues within the platform's user search functionality.`,
+      `Implemented dynamic username styling logic to ensure user search results accurately reflected rank-based color assignments, improving visual consistency and user experience.`,
+      `Collaborated within an open source development workflow using pull requests, issue tracking, and real-world best coding practices to deliver maintainable frontend improvements.`
+    ]
+  },
+  {
     title: 'Full-stack Developer',
     company: 'JAMHacks',
     startDate: 'Aug 2025',
     endDate: 'Present',
     location: 'Waterloo, Ontario',
     description: [
-      `Using Next.js and Tailwind CSS to develop the 'Sponsors' and 'Meet the Team' section of jamhacks.ca.`,
-      `Using RESTful API design to efficiently filter and automate the process of participants who were accepted, rejected, and waitlisted.`,
-      `Using Google Cloud Platform to integrate and host API's and bots on their Virtual Machine architecture.`]
+      `Developed and optimized the 'Sponsors' and 'Meet the Team' sections of jamhacks.ca using Next.js and Tailwind CSS, contributing to a platform that generated 10K+ website impressions.`,
+      `Engineered scalable RESTful APIs using Next.js API routes and Mongoose queries to automate applicant acceptance, rejection, and waitlist workflows, improving operational efficiency by over 400%.`,
+      `Designed backend data-filtering systems leveraging Mongoose and efficient API querying to streamline participant management and reduce manual review overhead.`,
+      `Built and deployed Discord bot infrastructure on Google Cloud Platform Virtual Machines, supporting 250+ hackers through automated community assistance and data collection.`,
+      `Implemented RESTful API integrations within the Discord bot, combining MongoDB/Mongoose data retrieval with Google Vertex AI APIs to aggregate and structure participant response data for a 19-member organizing team.`
+    ]
   },
   {
     title: 'Co-President',
@@ -33,8 +47,9 @@ const experiences: experienceProps[] = [
     endDate: 'Present',
     location: 'Waterloo, Ontario',
     description: [
-      `Leading and teaching weekly lectures on computer science topics to over 100 club members, strengthening and broadening their skill sets in a variety of topics.`,
-      `Boosting club attendance by 200% by communicating with six other executive members to host events such as project showcases, guest speakers, and AI competitions.`,
+      `Lead and deliver weekly computer science lectures to 100+ club members, covering programming, software development, and emerging technology topics to strengthen technical proficiency across the club.`,
+      `Increased club attendance by 200% through strategic collaboration with a 6-member executive team to organize project showcases, guest speaker events, and AI-focused competitions.`,
+      `Coordinate and mentor student-led initiatives while fostering an engaging and collaborative learning environment for aspiring developers and technology enthusiasts.`
     ]
   },
   {
@@ -44,8 +59,9 @@ const experiences: experienceProps[] = [
     endDate: 'Feb 2026',
     location: 'Waterloo, Ontario',
     description: [
-      `Designed and contributed to the Figma design for the frontend of the website with 3 other team members.`,
-      `Developed the 'About Me' and 'Sponsors' section of the website with CSS.`
+      `Collaborated with 3 cross-functional team members to design and prototype the frontend user experience in Figma, contributing to a modern and accessible event platform.`,
+      `Developed and styled the 'About Me' and 'Sponsors' sections of the website using CSS, improving visual consistency and user engagement across the platform.`,
+      `Contributed to frontend development workflows and UI implementation within a fast-paced hackathon organizing environment.`
     ]
   },
   {
@@ -55,9 +71,10 @@ const experiences: experienceProps[] = [
     endDate: 'Aug 2025',
     location: 'Remote',
     description: [
-      `Developed a catalogue application that centralized over 600 items used by the Data Analyst team, improving the overall documentation efficiency by 200%`,
-      `Utilized multiple Power Automate API flows to automatically update data in the Excel files and send emails to the stakeholders of the reports.`,
-      `Collaborated with 10 team members on the Data Analysis team, communicating and suggesting ideas to improve performance of the catalogue application.`
+      `Developed a centralized catalogue application managing 600+ assets for the Data Analyst team, improving documentation efficiency and accessibility by 200%.`,
+      `Engineered automated Power Automate workflows and API integrations to synchronize Excel-based reporting data and distribute stakeholder notifications, reducing manual operational overhead.`,
+      `Collaborated with a 10-member Data Analysis team to propose and implement performance improvements for the catalogue platform through iterative feedback and technical problem-solving.`,
+      `Contributed to process optimization initiatives by streamlining internal data management and reporting operations within a large-scale enterprise environment.`
     ]
   }
 ]
@@ -99,18 +116,23 @@ function ExperienceCard({ title, company, startDate, endDate, location, descript
 }
 
 export default function Experience() {
-  const [stars, setStars] = useState<starProperties[]>([]);
+  const {dataLoaded, stars} = useAppState();
 
-  useEffect(() => {
-    setStars(generateStars());
-  }, [])
+  if (!dataLoaded) {
+    return (
+      <div>
+        <h1> Test </h1>
+      </div>
+    );
+  }
 
   return (
-    <div id="Experience" className="flex flex-col justify-center items-center min-h-screen bg-linear-to-b from-midnightBlue to-tropicalBlue py-12 px-4">
+    <div id="Experience" className="flex flex-col justify-center items-center h-screen bg-linear-to-b from-midnightBlue to-tropicalBlue py-12 px-4">
       <h1 className="font-caveat text-white text-6xl md:text-8xl mb-8 z-10 text-center">
         Experiences
       </h1>
       <StarField starList={stars} reflect={false}/>
+      <PlanetField/>
       <div className="w-full max-w-4xl space-y-6 overflow-y-auto max-h-[70vh] scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
         {experiences.map((experience, idx) => {
           return (
