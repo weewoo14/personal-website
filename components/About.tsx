@@ -26,19 +26,25 @@ function AboutMe() {
         About Me
       </h1>
       <div className="text-left w-[65vw] ml-4 mr-4 z-10">
-        <p className="font-mplus text-[1.7rem] md:text-[2vw] text-bold text-white">
-          Hello! My name is Haoshi (Owen).
-        </p>
-        <p className="font-mplus text-[1.2rem] md:text-[1.3vw] text-bold text-white">
-          You might know me by my online alias "weewoo14", or some variation of that. <br/>
-          I'm currently a CS student at UWaterloo (Class of 2031). <br/>
-          I love building things that pique my interest! Right now, it's astronomy (hence the very obvious theme of the website)! <br/>
-        </p>
-        <a href="https://github.com/weewoo14" target="_blank">
-          <p className="font-mplus text-[1.7rem] md:text-[2vw] text-bold text-white mt-2 mb-2">
-            GitHub Activity:
+        <div className="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 md:p-8 shadow-lg">
+          <p className="font-mplus text-[1.6rem] md:text-[1.9rem] font-semibold text-white/95 leading-tight">
+            Hello — I'm Haoshi (Owen).
           </p>
-        </a>
+          <p className="font-mplus mt-4 text-[1rem] md:text-[1.05rem] text-white/85 leading-relaxed tracking-wide max-w-[100ch]">
+            You might know me by my online alias <span className="font-mono text-white/95">weewoo14</span> or some variation of that.
+          </p>
+          <p className="font-mplus mt-2 text-[1rem] md:text-[1.05rem] text-white/85 leading-relaxed tracking-wide max-w-[100ch]">
+            I'm currently a Computer Science student at the University of Waterloo (Class of 2031).
+          </p>
+          <p className="font-mplus mt-2 text-[1rem] md:text-[1.05rem] text-white/85 leading-relaxed tracking-wide max-w-[100ch]">
+            I love building things that pique my interest — lately it's astronomy (hence the site's theme)!
+          </p>
+          <a href="https://github.com/weewoo14" target="_blank" rel="noopener noreferrer" className="inline-block mt-4">
+            <p className="font-mplus text-[1.2rem] md:text-[1.4rem] font-medium text-white underline decoration-white/30 underline-offset-4">
+              GitHub Activity:
+            </p>
+          </a>
+        </div>
       </div>
       
       <div className="w-[65vw] max-h-[26vh] overflow-y-scroll">
