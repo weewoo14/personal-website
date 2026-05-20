@@ -32,7 +32,18 @@ export function getVectorPos(data: string) {
 }
 
 export async function getPlanetData(planetID: string) {
-  const response = await fetch(`/api/horizons?planetID=${planetID}`);
-  const data = await response.json();
-  return data;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    const response = await fetch(`/api/horizons?planetID=${planetID}`);
+    if (response.status !== 429) {
+      const data = await response.json();
+      return data;
+    }
+
+    const baseDelay = Math.pow(2, attempt) * 1000;
+    const jitter = Math.random() * 1000;
+    const delay = baseDelay + jitter;
+
+    console.log('Horizons API is ratelimited.');
+    await new Promise(resolve => setTimeout(resolve, delay));
+  }
 }

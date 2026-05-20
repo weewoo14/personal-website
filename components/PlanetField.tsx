@@ -49,7 +49,6 @@ export default function PlanetField() {
         const planetLeftPos = `${50 + ((planetVectorPos.x / 4) * 100)}%`;
         const planetSrc = `/${planetName}.png`;
         const planetData = planetExtraData[planetName];
-        console.log(planetData.size);
 
         return (
           <div key={planetName}>

@@ -23,11 +23,6 @@ const navLinks: navLinkProperties[] = [
     route: "/projects",
     styling: "font-caveat text-[5vw] md:text-[3vw] z-10 underline"
   },
-  {
-    name: "[sandbox]",
-    route: "/sandbox",
-    styling: "font-caveat text-[5vw] md:text-[3vw] z-10 underline"
-  },
 ];
 
 function Introduction() {
