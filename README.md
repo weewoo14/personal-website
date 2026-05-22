@@ -1,1 +1,2 @@
-New personal website that's in development!
+Deployed at:
+https://weewoo14.vercel.app/
