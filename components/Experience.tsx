@@ -1,6 +1,7 @@
 'use client';
 import StarField from "./StarField";
 import PlanetField from "./PlanetField";
+import LoadingScreen from "./LoadingScreen";
 import { useAppState } from "./AppStateProvider";
 import Link from "next/link";
 
@@ -120,9 +121,7 @@ export default function Experience() {
 
   if (!dataLoaded) {
     return (
-      <div>
-        <h1> Test </h1>
-      </div>
+      <LoadingScreen/>
     );
   }
 

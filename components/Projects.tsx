@@ -2,6 +2,7 @@
 import Link from "next/link";
 import StarField from "./StarField";
 import PlanetField from "./PlanetField";
+import LoadingScreen from "./LoadingScreen";
 import { useAppState } from "./AppStateProvider";
 
 type projectsProps = {
@@ -85,9 +86,7 @@ function Projects() {
 
   if (!dataLoaded) {
     return (
-      <div>
-        <h1> Test </h1>
-      </div>
+      <LoadingScreen/>
     );
   }
 
