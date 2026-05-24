@@ -23,6 +23,11 @@ const navLinks: navLinkProperties[] = [
     route: "/projects",
     styling: "font-caveat text-[5vw] md:text-[3vw] z-10 underline"
   },
+  {
+    name: "[resume]",
+    route: "/resume",
+    styling: "font-caveat text-[5vw] md:text-[3vw] z-10 underline"
+  }
 ];
 
 function Introduction() {
@@ -50,10 +55,13 @@ function Introduction() {
 
       <div className="flex flex-row justify-center items-center gap-4">
         {navLinks.map((navLink, idx) => {
+          const targetRef = navLink.name === "[resume]" ? "_blank" : "";
+
           return(
             <Link
               key = {idx}
               href = {navLink.route}
+              target = {targetRef}
               className={`${navLink.styling} text-white`}
             >
               {navLink.name}
