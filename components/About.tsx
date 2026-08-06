@@ -14,6 +14,8 @@ function AboutMe() {
     );
   }
 
+  console.log( gitHubActivity);
+
   return (
     <div id="AboutMe" className="flex flex-col justify-center items-center h-screen bg-linear-to-b from-midnightBlue to-tropicalBlue">
       <StarField
