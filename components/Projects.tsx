@@ -6,11 +6,11 @@ import LoadingScreen from "./LoadingScreen";
 import { useAppState } from "./AppStateProvider";
 
 type projectsProps = {
-  title: String,
-  startDate: String,
-  endDate: String,
+  title: string,
+  startDate: string,
+  endDate: string,
   link: string,
-  description: String[],
+  description: string[],
 };
 
 const projects: projectsProps[] = [

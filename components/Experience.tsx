@@ -6,15 +6,28 @@ import { useAppState } from "./AppStateProvider";
 import Link from "next/link";
 
 type experienceProps = {
-  title: String
-  company: String
-  startDate: String
-  endDate: String
-  location: String
-  description: String[]
+  title: string
+  company: string
+  startDate: string
+  endDate: string
+  location: string
+  description: string[]
 }
 
 const experiences: experienceProps[] = [
+  {
+    title: 'Software Engineer (Future Tech)',
+    company: 'Nokia',
+    startDate: 'Jul 2025',
+    endDate: 'Aug 2025',
+    location: 'Remote',
+    description: [
+      `Developed a centralized catalogue application managing 600+ assets for the Data Analyst team, improving documentation efficiency and accessibility by 200%.`,
+      `Engineered automated Power Automate workflows and API integrations to synchronize Excel-based reporting data and distribute stakeholder notifications, reducing manual operational overhead.`,
+      `Collaborated with a 10-member Data Analysis team to propose and implement performance improvements for the catalogue platform through iterative feedback and technical problem-solving.`,
+      `Contributed to process optimization initiatives by streamlining internal data management and reporting operations within a large-scale enterprise environment.`
+    ]
+  },
   {
     title: 'Open-Source Contributor',
     company: 'DMOJ',
@@ -65,19 +78,6 @@ const experiences: experienceProps[] = [
       `Contributed to frontend development workflows and UI implementation within a fast-paced hackathon organizing environment.`
     ]
   },
-  {
-    title: 'Software Engineer (Future Tech)',
-    company: 'Nokia',
-    startDate: 'Jul 2025',
-    endDate: 'Aug 2025',
-    location: 'Remote',
-    description: [
-      `Developed a centralized catalogue application managing 600+ assets for the Data Analyst team, improving documentation efficiency and accessibility by 200%.`,
-      `Engineered automated Power Automate workflows and API integrations to synchronize Excel-based reporting data and distribute stakeholder notifications, reducing manual operational overhead.`,
-      `Collaborated with a 10-member Data Analysis team to propose and implement performance improvements for the catalogue platform through iterative feedback and technical problem-solving.`,
-      `Contributed to process optimization initiatives by streamlining internal data management and reporting operations within a large-scale enterprise environment.`
-    ]
-  }
 ]
 
 function ExperienceCard({ title, company, startDate, endDate, location, description } : experienceProps ) {
