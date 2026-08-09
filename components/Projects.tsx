@@ -15,6 +15,19 @@ type projectsProps = {
 
 const projects: projectsProps[] = [
   {
+    title: 'StarWeave',
+    startDate: 'May 2026',
+    endDate: 'August 2026',
+    link: 'https://github.com/weewoo14/StarWeave',
+    description: [
+      `Developed a full-stack astronomy database using Next.JS, TypeScript, MongoDB, and Redis with 7k+ objects`,
+      `Built REST APIs that reduced database retrieval time from 3.0s to 1,2s through optimized MongoDB queries`,
+      `Designed a Redis/MongoDB caching layer, reducing API resposne and page load times by 87% (1.5s --> 0.3s)`,
+      `Secured REST APIs using Upstash rate limiting, protecting backend services from abuse and excessive requests`,
+      `Integrated data from NASA JPL Hoirzons API and Exoplanet API into a scalable backend data pipeline`
+    ]
+  },
+  {
     title: 'Graph Theory Visualizer',
     startDate: 'Dec 2025',
     endDate: 'Jan 2026',
