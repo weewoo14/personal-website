@@ -38,7 +38,7 @@ function AboutMe() {
             I'm currently a Computer Science student at the University of Waterloo (Class of 2031).
           </p>
           <p className="font-mplus mt-2 text-[1rem] md:text-[1.05rem] text-white/85 leading-relaxed tracking-wide max-w-[100ch]">
-            I love building things that pique my interest — lately it's astronomy (hence the site's theme)!
+            I love building things that pique my interest — lately it's been astronomy (hence the site's theme) and networks!
           </p>
           <a href="https://github.com/weewoo14" target="_blank" rel="noopener noreferrer" className="inline-block mt-4">
             <p className="font-mplus text-[1.2rem] md:text-[1.4rem] font-medium text-white underline decoration-white/30 underline-offset-4">
